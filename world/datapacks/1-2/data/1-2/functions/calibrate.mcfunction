@@ -1,5 +1,4 @@
 data modify storage 1-2: input set from storage 1-2: inputs[-1]
-function 1-2:print_input with storage 1-2:
 data remove storage 1-2: inputs[-1]
 
 scoreboard players operation #old_sum _ = #sum _
