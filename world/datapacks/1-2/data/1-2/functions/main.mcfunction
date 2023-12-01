@@ -1,7 +1,5 @@
 function 1-2:input
 
-scoreboard objectives remove _
-scoreboard objectives add _ dummy
 scoreboard players reset *
 scoreboard players set #sum _ 0
 
