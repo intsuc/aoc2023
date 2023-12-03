@@ -80,12 +80,7 @@ execute if score #tl _ matches -1 if score #t _ matches 0..9 run data modify sto
 #   n
 #  *
 #
-execute if score #tl _ matches -1 if score #t _ matches -1 if score #tr _ matches 0..9 run data modify storage 03-2: offsets append value [B; 1b, -1b]
-
-# m n
-#  *
-#
-execute if score #tl _ matches 0..9 if score #t _ matches -1 if score #tr _ matches 0..9 run data modify storage 03-2: offsets append value [B; 1b, -1b]
+execute if score #t _ matches -1 if score #tr _ matches 0..9 run data modify storage 03-2: offsets append value [B; 1b, -1b]
 
 #
 # n*
@@ -110,9 +105,4 @@ execute if score #bl _ matches -1 if score #b _ matches 0..9 run data modify sto
 #
 #  *
 #   n
-execute if score #bl _ matches -1 if score #b _ matches -1 if score #br _ matches 0..9 run data modify storage 03-2: offsets append value [B; 1b, 1b]
-
-#
-#  *
-# m n
-execute if score #bl _ matches 0..9 if score #b _ matches -1 if score #br _ matches 0..9 run data modify storage 03-2: offsets append value [B; 1b, 1b]
+execute if score #b _ matches -1 if score #br _ matches 0..9 run data modify storage 03-2: offsets append value [B; 1b, 1b]
